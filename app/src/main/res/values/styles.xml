@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Tema principal de la app -->
+    <style name="Theme.Therminous2" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <!-- Colores personalizados -->
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+
+        <!-- Fondo oscuro general -->
+        <item name="android:windowBackground">@color/background_dark</item>
+
+        <!-- Texto principal en blanco -->
+        <item name="android:textColorPrimary">@color/text_primary</item>
+
+        <!-- Botones estilizados -->
+        <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Colored</item>
+
+        <!-- Fuente (opcional si deseas customizar más adelante) -->
+        <!-- <item name="android:fontFamily">@font/tu_fuente</item> -->
+    </style>
+
+    <!-- Estilo para el Spinner con texto blanco -->
+    <style name="SpinnerWhiteText" parent="Theme.AppCompat.Light">
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textColorHint">#AAAAAA</item>
+        <item name="android:popupBackground">#333333</item>
+    </style>
+
+</resources>

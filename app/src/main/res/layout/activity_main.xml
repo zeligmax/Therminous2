@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Variables activas"
+            android:textColor="@color/text_primary"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Interruptores -->
+        <Switch
+            android:id="@+id/switchAx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ax (Giroscopio X)"
+            android:textColor="@color/text_primary"
+            android:checked="true"
+            app:thumbTint="#FF0000"
+            app:trackTint="#330000" />
+
+        <Switch
+            android:id="@+id/switchAy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ay (Giroscopio Y)"
+            android:textColor="@color/text_primary"
+            android:checked="true"
+            app:thumbTint="#00FF00"
+            app:trackTint="#003300" />
+
+        <Switch
+            android:id="@+id/switchAz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Az (Giroscopio Z)"
+            android:textColor="@color/text_primary"
+            android:checked="true"
+            app:thumbTint="#00BFFF"
+            app:trackTint="#001133" />
+
+        <Switch
+            android:id="@+id/switchAlt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Altitud"
+            android:textColor="@color/text_primary"
+            android:checked="true"
+            app:thumbTint="#FFD700"
+            app:trackTint="#332200" />
+
+        <Switch
+            android:id="@+id/switchLat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Latitud"
+            android:textColor="@color/text_primary"
+            android:checked="true"
+            app:thumbTint="#FF69B4"
+            app:trackTint="#33001A" />
+
+        <Switch
+            android:id="@+id/switchLon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Longitud"
+            android:textColor="@color/text_primary"
+            android:checked="true"
+            app:thumbTint="#00FFFF"
+            app:trackTint="#003333" />
+
+        <!-- Inputs manuales -->
+        <EditText
+            android:id="@+id/inputAltitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Altitud manual (opcional)"
+            android:inputType="numberDecimal"
+            android:textColorHint="#AAAAAA"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/grey_medium"
+            android:layout_marginTop="24dp" />
+
+        <EditText
+            android:id="@+id/inputLatitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Latitud manual (opcional)"
+            android:inputType="numberDecimal"
+            android:textColorHint="#AAAAAA"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/grey_medium" />
+
+        <EditText
+            android:id="@+id/inputLongitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Longitud manual (opcional)"
+            android:inputType="numberDecimal"
+            android:textColorHint="#AAAAAA"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/grey_medium" />
+
+        <!-- Botón iniciar/detener -->
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎧 Iniciar sonido"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/grey_dark"
+            android:layout_marginTop="24dp" />
+
+        <!-- Sensibilidad -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sensibilidad:"
+            android:textColor="@color/white"
+            android:layout_marginTop="24dp" />
+
+        <SeekBar
+            android:id="@+id/seekBarSensitivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:thumbTint="@color/highlight_blue"
+            android:progressTint="@color/highlight_blue_dark" />
+
+        <!-- Selector de onda -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo de onda:"
+            android:textColor="@color/white"
+            android:layout_marginTop="24dp" />
+
+        <Spinner
+            android:id="@+id/spinnerWaveType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:popupBackground="@color/grey_dark"
+            android:layout_marginBottom="16dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+        <!-- Valores actuales -->
+        <TextView
+            android:id="@+id/textValues"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp"
+            android:text="Esperando datos..." />
+
+        <!-- Modos Theremin -->
+        <Switch
+            android:id="@+id/switchTheremin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎛️ Modo Theremin"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white" />
+
+        <Switch
+            android:id="@+id/switchThereminCasiContinuo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎛️ Theremin casi-continuo"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp" />
+
+        <Switch
+            android:id="@+id/switchThereminContinuo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎛️ Theremin continuo"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+</ScrollView>
